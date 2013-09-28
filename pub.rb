@@ -3,7 +3,7 @@ require 'rubygems'
 require 'redis'
 require 'json'
 
-$redis = Redis.new
+$redis = Redis.new(:host => 'hackon.cc')
 
 data = {'user' => ARGV[1]}
 

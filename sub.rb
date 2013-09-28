@@ -2,7 +2,7 @@ require 'rubygems'
 require 'redis'
 require 'json'
 
-$redis = Redis.new(:timeout => 0)
+$redis = Redis.new(:host => 'hackon.cc')
 
 $redis.subscribe('rcne') do |on|
   on.message do |channel, msg|
